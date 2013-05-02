@@ -1,3 +1,6 @@
 package models
 
-//case class MyRecord(x: String)
+trait MyRec
+case class MyRecord(x: String) //extends MyRec
+
+
