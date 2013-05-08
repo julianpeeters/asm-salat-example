@@ -1,4 +1,4 @@
-package models;
+package asm.models;
 import java.util.*;
 import org.objectweb.asm.*;
 //import org.objectweb.asm.attrs.*;
@@ -11,11 +11,11 @@ FieldVisitor fv;
 MethodVisitor mv;
 AnnotationVisitor av0;
 
-cw.visit(V1_5, ACC_PUBLIC + ACC_SUPER, "models/MyRecord", null, "java/lang/Object", new String[] { "scala/ScalaObject", "scala/Product", "scala/Serializable" });
+cw.visit(V1_6, ACC_PUBLIC + ACC_SUPER, "models/MyRecord", null, "java/lang/Object", new String[] { "models/DynamicBase", "scala/Product", "scala/Serializable" });
 
 {
 av0 = cw.visitAnnotation("Lscala/reflect/ScalaSignature;", true);
-av0.visit("bytes", "\u0006\u0001}4A!\u0001\u0002A\u000b\u0009AQ*\u001f*fG>\u0014HMC\u0001\u0004\u0003\u0019iw\u000eZ3mg\u000e\u00011#\u0002\u0001\u0007\u001dQ9\u0002CA\u0004\r\u001b\u0005A!BA\u0005\u000b\u0003\u0011a\u0017M\\4\u000b\u0003-\u0009AA[1wC&\u0011Q\u0002\u0003\u0002\u0007\u001f\nTWm\u0019;\u0011\u0005=\u0011R\"\u0001\u0009\u000b\u0003E\u0009Qa]2bY\u0006L!a\u0005\u0009\u0003\u0017M\u001b\u0017\r\\1PE*,7\r\u001e\u0009\u0003\u001fUI!A\u0006\u0009\u0003\u000fA\u0013x\u000eZ;diB\u0011q\u0002G\u0005\u00033A\u0011AbU3sS\u0006d\u0017N_1cY\u0016D\u0001b\u0007\u0001\u0003\u0016\u0004%\u0009\u0001H\u0001\u0002qV\u0009Q\u0004\u0005\u0002\u001fC9\u0011qbH\u0005\u0003AA\u0009a\u0001\u0015:fI\u00164\u0017B\u0001\u0012$\u0005\u0019\u0019FO]5oO*\u0011\u0001\u0005\u0005\u0005\u0009K\u0001\u0011\u0009\u0012)A\u0005;\u0005\u0011\u0001\u0010\u0009\u0005\u0006O\u0001!\u0009\u0001K\u0001\u0007y%t\u0017\u000e\u001e \u0015\u0005%Z\u0003C\u0001\u0016\u0001\u001b\u0005\u0011\u0001\"B\u000e'\u0001\u0004i\u0002bB\u0017\u0001\u0003\u0003%\u0009AL\u0001\u0005G>\u0004\u0018\u0010\u0006\u0002*_!91\u0004\u000cI\u0001\u0002\u0004i\u0002bB\u0019\u0001#\u0003%\u0009AM\u0001\u000fG>\u0004\u0018\u0010\n3fM\u0006,H\u000e\u001e\u00132+\u0005\u0019$FA\u000f5W\u0005)\u0004C\u0001\u001c<\u001b\u00059$B\u0001\u001d:\u0003%)hn\u00195fG.,GM\u0003\u0002;!\u0005Q\u0011M\u001c8pi\u0006$\u0018n\u001c8\n\u0005q:$!E;oG\",7m[3e-\u0006\u0014\u0018.\u00198dK\")a\u0008\u0001C!\u0005A\u0001.Y:i\u0007>$W\rF\u0001A!\u0009y\u0011)\u0003\u0002C!\u0009\u0019\u0011J\u001c;\u0009\u000b\u0011\u0003A\u0011I#\u0002\u0011Q|7\u000b\u001e:j]\u001e$\u0012!\u0008\u0005\u0006\u000f\u0002!\u0009\u0005S\u0001\u0007KF,\u0018\r\\:\u0015\u0005%c\u0005CA\u0008K\u0013\u0009Y\u0005CA\u0004C_>dW-\u00198\u0009\u000f53\u0015\u0011!a\u0001\u001d\u0006\u0019\u0001\u0010J\u0019\u0011\u0005=y\u0015B\u0001)\u0011\u0005\r\u0009e.\u001f\u0005\u0006%\u0002!\u0009eU\u0001\u000eaJ|G-^2u!J,g-\u001b=\u0016\u0003Q\u0003\"aB+\n\u0005\u0009B\u0001\"B,\u0001\u0009\u0003B\u0016\u0001\u00049s_\u0012,8\r^!sSRLX#\u0001!\u0009\u000bi\u0003A\u0011I.\u0002\u001dA\u0014x\u000eZ;di\u0016cW-\\3oiR\u0011a\n\u0018\u0005\u0008\u001bf\u000b\u0009\u00111\u0001A\u0011\u0015q\u0006\u0001\"\u0011`\u0003!\u0019\u0017M\\#rk\u0006dGCA%a\u0011\u001diU,!AA\u00029;qA\u0019\u0002\u0002\u0002#\u00151-\u0001\u0005NsJ+7m\u001c:e!\u0009QCMB\u0004\u0002\u0005\u0005\u0005\u0009RA3\u0014\u0009\u00114gb\u0006\u0009\u0005O*l\u0012&D\u0001i\u0015\u0009I\u0007#A\u0004sk:$\u0018.\\3\n\u0005-D'!E!cgR\u0014\u0018m\u0019;Gk:\u001cG/[8oc!)q\u0005\u001aC\u0001[R\u00091\rC\u0003EI\u0012\u0015s\u000eF\u0001U\u0011\u001d\u0009H-!A\u0005\u0002J\u000cQ!\u00199qYf$\"!K:\u0009\u000bm\u0001\u0008\u0019A\u000f\u0009\u000fU$\u0017\u0011!CAm\u00069QO\\1qa2LHCA<{!\ry\u00010H\u0005\u0003sB\u0011aa\u00149uS>t\u0007\"B>u\u0001\u0004I\u0013a\u0001=%a!)Q\u0010\u001aC\u0009}\u0006Y!/Z1e%\u0016\u001cx\u000e\u001c<f)\u00051\u0001");
+av0.visit("bytes", "\u0006\u0001\u0005Ua\u0001B\u0001\u0003\u0001\u0016\u0011\u0001\"T=SK\u000e|'\u000f\u001a\u0006\u0002\u0007\u00051Qn\u001c3fYN\u001c\u0001aE\u0003\u0001\r1\u00012\u0003\u0005\u0002\u0008\u00155\u0009\u0001BC\u0001\n\u0003\u0015\u00198-\u00197b\u0013\u0009Y\u0001B\u0001\u0004B]f\u0014VM\u001a\u0009\u0003\u001b9i\u0011AA\u0005\u0003\u001f\u0009\u00111\u0002R=oC6L7MQ1tKB\u0011q!E\u0005\u0003%!\u0011q\u0001\u0015:pIV\u001cG\u000f\u0005\u0002\u0008)%\u0011Q\u0003\u0003\u0002\r'\u0016\u0014\u0018.\u00197ju\u0006\u0014G.\u001a\u0005\u0009/\u0001\u0011)\u001a!C\u00011\u0005\u0009\u00010F\u0001\u001a!\u0009QRD\u0004\u0002\u00087%\u0011A\u0004C\u0001\u0007!J,G-\u001a4\n\u0005yy\"AB*ue&twM\u0003\u0002\u001d\u0011!A\u0011\u0005\u0001B\u0009B\u0003%\u0011$\u0001\u0002yA!)1\u0005\u0001C\u0001I\u00051A(\u001b8jiz\"\"!\n\u0014\u0011\u00055\u0001\u0001\"B\u000c#\u0001\u0004I\u0002b\u0002\u0015\u0001\u0003\u0003%\u0009!K\u0001\u0005G>\u0004\u0018\u0010\u0006\u0002&U!9qc\nI\u0001\u0002\u0004I\u0002b\u0002\u0017\u0001#\u0003%\u0009!L\u0001\u000fG>\u0004\u0018\u0010\n3fM\u0006,H\u000e\u001e\u00132+\u0005q#FA\r0W\u0005\u0001\u0004CA\u00197\u001b\u0005\u0011$BA\u001a5\u0003%)hn\u00195fG.,GM\u0003\u00026\u0011\u0005Q\u0011M\u001c8pi\u0006$\u0018n\u001c8\n\u0005]\u0012$!E;oG\",7m[3e-\u0006\u0014\u0018.\u00198dK\"9\u0011\u0008AA\u0001\n\u0003R\u0014!\u00049s_\u0012,8\r\u001e)sK\u001aL\u00070F\u0001<!\u0009a\u0014)D\u0001>\u0015\u0009qt(\u0001\u0003mC:<'\"\u0001!\u0002\u0009)\u000cg/Y\u0005\u0003=uBqa\u0011\u0001\u0002\u0002\u0013\u0005A)\u0001\u0007qe>$Wo\u0019;Be&$\u00180F\u0001F!\u00099a)\u0003\u0002H\u0011\u0009\u0019\u0011J\u001c;\u0009\u000f%\u0003\u0011\u0011!C\u0001\u0015\u0006q\u0001O]8ek\u000e$X\u0009\\3nK:$HCA&O!\u00099A*\u0003\u0002N\u0011\u0009\u0019\u0011I\\=\u0009\u000f=C\u0015\u0011!a\u0001\u000b\u0006\u0019\u0001\u0010J\u0019\u0009\u000fE\u0003\u0011\u0011!C!%\u0006y\u0001O]8ek\u000e$\u0018\n^3sCR|'/F\u0001T!\r!vkS\u0007\u0002+*\u0011a\u000bC\u0001\u000bG>dG.Z2uS>t\u0017B\u0001-V\u0005!IE/\u001a:bi>\u0014\u0008b\u0002.\u0001\u0003\u0003%\u0009aW\u0001\u0009G\u0006tW)];bYR\u0011Al\u0018\u0009\u0003\u000fuK!A\u0018\u0005\u0003\u000f\u0009{w\u000e\\3b]\"9q*WA\u0001\u0002\u0004Y\u0005bB1\u0001\u0003\u0003%\u0009EY\u0001\u0009Q\u0006\u001c\u0008nQ8eKR\u0009Q\u0009C\u0004e\u0001\u0005\u0005I\u0011I3\u0002\u0011Q|7\u000b\u001e:j]\u001e$\u0012a\u000f\u0005\u0008O\u0002\u0009\u0009\u0011\"\u0011i\u0003\u0019)\u0017/^1mgR\u0011A,\u001b\u0005\u0008\u001f\u001a\u000c\u0009\u00111\u0001L\u000f\u001dY'!!A\u0009\u00021\u000c\u0001\"T=SK\u000e|'\u000f\u001a\u0009\u0003\u001b54q!\u0001\u0002\u0002\u0002#\u0005anE\u0002n_N\u0001B\u0001]:\u001aK5\u0009\u0011O\u0003\u0002s\u0011\u00059!/\u001e8uS6,\u0017B\u0001;r\u0005E\u0009%m\u001d;sC\u000e$h)\u001e8di&|g.\r\u0005\u0006G5$\u0009A\u001e\u000b\u0002Y\"9A-\\A\u0001\n\u000b*\u0007bB=n\u0003\u0003%\u0009I_\u0001\u0006CB\u0004H.\u001f\u000b\u0003KmDQa\u0006=A\u0002eAq!`7\u0002\u0002\u0013\u0005e0A\u0004v]\u0006\u0004\u0008\u000f\\=\u0015\u0007}\u000c)\u0001\u0005\u0003\u0008\u0003\u0003I\u0012bAA\u0002\u0011\u00091q\n\u001d;j_:Da!a\u0002}\u0001\u0004)\u0013a\u0001=%a!I\u00111B7\u0002\u0002\u0013%\u0011QB\u0001\u000ce\u0016\u000cGMU3t_24X\r\u0006\u0002\u0002\u0010A\u0019A(!\u0005\n\u0007\u0005MQH\u0001\u0004PE*,7\r\u001e");
 av0.visitEnd();
 }
 // ATTRIBUTE ScalaSig
@@ -24,7 +24,7 @@ fv = cw.visitField(ACC_PRIVATE + ACC_FINAL, "x", "Ljava/lang/String;", null, nul
 fv.visitEnd();
 }
 {
-mv = cw.visitMethod(ACC_PUBLIC + ACC_FINAL + ACC_STATIC, "andThen", "(Lscala/Function1;)Lscala/Function1;", "<A:Ljava/lang/Object;>(Lscala/Function1<Lmodels/MyRecord;TA;>;)Lscala/Function1<Ljava/lang/String;TA;>;", null);
+mv = cw.visitMethod(ACC_PUBLIC + ACC_STATIC, "andThen", "(Lscala/Function1;)Lscala/Function1;", "<A:Ljava/lang/Object;>(Lscala/Function1<Lmodels/MyRecord;TA;>;)Lscala/Function1<Ljava/lang/String;TA;>;", null);
 mv.visitCode();
 mv.visitFieldInsn(GETSTATIC, "models/MyRecord$", "MODULE$", "Lmodels/MyRecord$;");
 mv.visitVarInsn(ALOAD, 0);
@@ -34,31 +34,13 @@ mv.visitMaxs(2, 1);
 mv.visitEnd();
 }
 {
-mv = cw.visitMethod(ACC_PUBLIC + ACC_FINAL + ACC_STATIC, "compose", "(Lscala/Function1;)Lscala/Function1;", "<A:Ljava/lang/Object;>(Lscala/Function1<TA;Ljava/lang/String;>;)Lscala/Function1<TA;Lmodels/MyRecord;>;", null);
+mv = cw.visitMethod(ACC_PUBLIC + ACC_STATIC, "compose", "(Lscala/Function1;)Lscala/Function1;", "<A:Ljava/lang/Object;>(Lscala/Function1<TA;Ljava/lang/String;>;)Lscala/Function1<TA;Lmodels/MyRecord;>;", null);
 mv.visitCode();
 mv.visitFieldInsn(GETSTATIC, "models/MyRecord$", "MODULE$", "Lmodels/MyRecord$;");
 mv.visitVarInsn(ALOAD, 0);
 mv.visitMethodInsn(INVOKEVIRTUAL, "models/MyRecord$", "compose", "(Lscala/Function1;)Lscala/Function1;");
 mv.visitInsn(ARETURN);
 mv.visitMaxs(2, 1);
-mv.visitEnd();
-}
-{
-mv = cw.visitMethod(ACC_PUBLIC + ACC_BRIDGE, "productIterator", "()Lscala/collection/Iterator;", "()Lscala/collection/Iterator<Ljava/lang/Object;>;", null);
-mv.visitCode();
-mv.visitVarInsn(ALOAD, 0);
-mv.visitMethodInsn(INVOKESTATIC, "scala/Product$class", "productIterator", "(Lscala/Product;)Lscala/collection/Iterator;");
-mv.visitInsn(ARETURN);
-mv.visitMaxs(1, 1);
-mv.visitEnd();
-}
-{
-mv = cw.visitMethod(ACC_PUBLIC + ACC_BRIDGE + ACC_DEPRECATED, "productElements", "()Lscala/collection/Iterator;", "()Lscala/collection/Iterator<Ljava/lang/Object;>;", null);
-mv.visitCode();
-mv.visitVarInsn(ALOAD, 0);
-mv.visitMethodInsn(INVOKESTATIC, "scala/Product$class", "productElements", "(Lscala/Product;)Lscala/collection/Iterator;");
-mv.visitInsn(ARETURN);
-mv.visitMaxs(1, 1);
 mv.visitEnd();
 }
 {
@@ -88,6 +70,67 @@ mv.visitVarInsn(ALOAD, 0);
 mv.visitMethodInsn(INVOKEVIRTUAL, "models/MyRecord", "x", "()Ljava/lang/String;");
 mv.visitInsn(ARETURN);
 mv.visitMaxs(1, 1);
+mv.visitEnd();
+}
+{
+mv = cw.visitMethod(ACC_PUBLIC, "productPrefix", "()Ljava/lang/String;", null, null);
+mv.visitCode();
+mv.visitLdcInsn("MyRecord");
+mv.visitInsn(ARETURN);
+mv.visitMaxs(1, 1);
+mv.visitEnd();
+}
+{
+mv = cw.visitMethod(ACC_PUBLIC, "productArity", "()I", null, null);
+mv.visitCode();
+mv.visitInsn(ICONST_1);
+mv.visitInsn(IRETURN);
+mv.visitMaxs(1, 1);
+mv.visitEnd();
+}
+{
+mv = cw.visitMethod(ACC_PUBLIC, "productElement", "(I)Ljava/lang/Object;", null, null);
+mv.visitCode();
+mv.visitVarInsn(ILOAD, 1);
+mv.visitVarInsn(ISTORE, 2);
+mv.visitVarInsn(ILOAD, 2);
+Label l0 = new Label();
+Label l1 = new Label();
+mv.visitTableSwitchInsn(0, 0, l1, new Label[] { l0 });
+mv.visitLabel(l1);
+mv.visitFrame(Opcodes.F_APPEND,1, new Object[] {Opcodes.INTEGER}, 0, null);
+mv.visitTypeInsn(NEW, "java/lang/IndexOutOfBoundsException");
+mv.visitInsn(DUP);
+mv.visitVarInsn(ILOAD, 1);
+mv.visitMethodInsn(INVOKESTATIC, "scala/runtime/BoxesRunTime", "boxToInteger", "(I)Ljava/lang/Integer;");
+mv.visitMethodInsn(INVOKEVIRTUAL, "java/lang/Object", "toString", "()Ljava/lang/String;");
+mv.visitMethodInsn(INVOKESPECIAL, "java/lang/IndexOutOfBoundsException", "<init>", "(Ljava/lang/String;)V");
+mv.visitInsn(ATHROW);
+mv.visitLabel(l0);
+mv.visitFrame(Opcodes.F_SAME, 0, null, 0, null);
+mv.visitVarInsn(ALOAD, 0);
+mv.visitMethodInsn(INVOKEVIRTUAL, "models/MyRecord", "x", "()Ljava/lang/String;");
+mv.visitInsn(ARETURN);
+mv.visitMaxs(3, 3);
+mv.visitEnd();
+}
+{
+mv = cw.visitMethod(ACC_PUBLIC, "productIterator", "()Lscala/collection/Iterator;", "()Lscala/collection/Iterator<Ljava/lang/Object;>;", null);
+mv.visitCode();
+mv.visitFieldInsn(GETSTATIC, "scala/runtime/ScalaRunTime$", "MODULE$", "Lscala/runtime/ScalaRunTime$;");
+mv.visitVarInsn(ALOAD, 0);
+mv.visitMethodInsn(INVOKEVIRTUAL, "scala/runtime/ScalaRunTime$", "typedProductIterator", "(Lscala/Product;)Lscala/collection/Iterator;");
+mv.visitInsn(ARETURN);
+mv.visitMaxs(2, 1);
+mv.visitEnd();
+}
+{
+mv = cw.visitMethod(ACC_PUBLIC, "canEqual", "(Ljava/lang/Object;)Z", null, null);
+mv.visitCode();
+mv.visitVarInsn(ALOAD, 1);
+mv.visitTypeInsn(INSTANCEOF, "models/MyRecord");
+mv.visitInsn(IRETURN);
+mv.visitMaxs(1, 2);
 mv.visitEnd();
 }
 {
@@ -123,121 +166,68 @@ mv.visitVarInsn(ALOAD, 2);
 mv.visitTypeInsn(INSTANCEOF, "models/MyRecord");
 Label l1 = new Label();
 mv.visitJumpInsn(IFEQ, l1);
-mv.visitVarInsn(ALOAD, 2);
-mv.visitTypeInsn(CHECKCAST, "models/MyRecord");
-mv.visitVarInsn(ASTORE, 3);
-mv.visitVarInsn(ALOAD, 3);
-mv.visitMethodInsn(INVOKEVIRTUAL, "models/MyRecord", "x", "()Ljava/lang/String;");
-mv.visitVarInsn(ASTORE, 4);
-mv.visitVarInsn(ALOAD, 4);
-mv.visitVarInsn(ASTORE, 5);
-mv.visitVarInsn(ALOAD, 0);
-mv.visitVarInsn(ALOAD, 5);
-mv.visitMethodInsn(INVOKESPECIAL, "models/MyRecord", "gd1$1", "(Ljava/lang/String;)Z");
-Label l2 = new Label();
-mv.visitJumpInsn(IFEQ, l2);
-mv.visitVarInsn(ALOAD, 1);
-mv.visitTypeInsn(CHECKCAST, "models/MyRecord");
-mv.visitVarInsn(ALOAD, 0);
-mv.visitMethodInsn(INVOKEINTERFACE, "scala/Equals", "canEqual", "(Ljava/lang/Object;)Z");
-Label l3 = new Label();
-mv.visitJumpInsn(GOTO, l3);
-mv.visitLabel(l2);
-mv.visitInsn(ICONST_0);
-mv.visitJumpInsn(GOTO, l3);
-mv.visitLabel(l1);
-mv.visitInsn(ICONST_0);
-mv.visitLabel(l3);
-Label l4 = new Label();
-mv.visitJumpInsn(IFEQ, l4);
-mv.visitLabel(l0);
 mv.visitInsn(ICONST_1);
-Label l5 = new Label();
-mv.visitJumpInsn(GOTO, l5);
-mv.visitLabel(l4);
-mv.visitInsn(ICONST_0);
-mv.visitLabel(l5);
-mv.visitInsn(IRETURN);
-mv.visitMaxs(2, 6);
-mv.visitEnd();
-}
-{
-mv = cw.visitMethod(ACC_PUBLIC, "productPrefix", "()Ljava/lang/String;", null, null);
-mv.visitCode();
-mv.visitLdcInsn("MyRecord");
-mv.visitInsn(ARETURN);
-mv.visitMaxs(1, 1);
-mv.visitEnd();
-}
-{
-mv = cw.visitMethod(ACC_PUBLIC, "productArity", "()I", null, null);
-mv.visitCode();
-mv.visitInsn(ICONST_1);
-mv.visitInsn(IRETURN);
-mv.visitMaxs(1, 1);
-mv.visitEnd();
-}
-{
-mv = cw.visitMethod(ACC_PUBLIC, "productElement", "(I)Ljava/lang/Object;", null, null);
-mv.visitCode();
-mv.visitVarInsn(ILOAD, 1);
-mv.visitVarInsn(ISTORE, 2);
-mv.visitVarInsn(ILOAD, 2);
-mv.visitInsn(ICONST_0);
-Label l0 = new Label();
-mv.visitJumpInsn(IF_ICMPNE, l0);
-mv.visitVarInsn(ALOAD, 0);
-mv.visitMethodInsn(INVOKEVIRTUAL, "models/MyRecord", "x", "()Ljava/lang/String;");
-mv.visitInsn(ARETURN);
-mv.visitLabel(l0);
-mv.visitTypeInsn(NEW, "java/lang/IndexOutOfBoundsException");
-mv.visitInsn(DUP);
-mv.visitVarInsn(ILOAD, 1);
-mv.visitMethodInsn(INVOKESTATIC, "scala/runtime/BoxesRunTime", "boxToInteger", "(I)Ljava/lang/Integer;");
-mv.visitMethodInsn(INVOKEVIRTUAL, "java/lang/Object", "toString", "()Ljava/lang/String;");
-mv.visitMethodInsn(INVOKESPECIAL, "java/lang/IndexOutOfBoundsException", "<init>", "(Ljava/lang/String;)V");
-mv.visitInsn(ATHROW);
-mv.visitMaxs(3, 3);
-mv.visitEnd();
-}
-{
-mv = cw.visitMethod(ACC_PUBLIC, "canEqual", "(Ljava/lang/Object;)Z", null, null);
-mv.visitCode();
-mv.visitVarInsn(ALOAD, 1);
-mv.visitTypeInsn(INSTANCEOF, "models/MyRecord");
-mv.visitInsn(IRETURN);
-mv.visitMaxs(1, 2);
-mv.visitEnd();
-}
-{
-mv = cw.visitMethod(ACC_PRIVATE + ACC_FINAL, "gd1$1", "(Ljava/lang/String;)Z", null, null);
-mv.visitCode();
-mv.visitVarInsn(ALOAD, 1);
-mv.visitVarInsn(ALOAD, 0);
-mv.visitMethodInsn(INVOKEVIRTUAL, "models/MyRecord", "x", "()Ljava/lang/String;");
-mv.visitVarInsn(ASTORE, 2);
-mv.visitInsn(DUP);
-Label l0 = new Label();
-mv.visitJumpInsn(IFNONNULL, l0);
-mv.visitInsn(POP);
-mv.visitVarInsn(ALOAD, 2);
-Label l1 = new Label();
-mv.visitJumpInsn(IFNULL, l1);
+mv.visitVarInsn(ISTORE, 3);
 Label l2 = new Label();
 mv.visitJumpInsn(GOTO, l2);
-mv.visitLabel(l0);
-mv.visitVarInsn(ALOAD, 2);
-mv.visitMethodInsn(INVOKEVIRTUAL, "java/lang/Object", "equals", "(Ljava/lang/Object;)Z");
-mv.visitJumpInsn(IFEQ, l2);
 mv.visitLabel(l1);
-mv.visitInsn(ICONST_1);
-Label l3 = new Label();
-mv.visitJumpInsn(GOTO, l3);
-mv.visitLabel(l2);
+mv.visitFrame(Opcodes.F_APPEND,1, new Object[] {"java/lang/Object"}, 0, null);
 mv.visitInsn(ICONST_0);
+mv.visitVarInsn(ISTORE, 3);
+mv.visitLabel(l2);
+mv.visitFrame(Opcodes.F_APPEND,1, new Object[] {Opcodes.INTEGER}, 0, null);
+mv.visitVarInsn(ILOAD, 3);
+Label l3 = new Label();
+mv.visitJumpInsn(IFEQ, l3);
+mv.visitVarInsn(ALOAD, 1);
+mv.visitTypeInsn(CHECKCAST, "models/MyRecord");
+mv.visitVarInsn(ASTORE, 4);
+mv.visitVarInsn(ALOAD, 0);
+mv.visitMethodInsn(INVOKEVIRTUAL, "models/MyRecord", "x", "()Ljava/lang/String;");
+mv.visitVarInsn(ALOAD, 4);
+mv.visitMethodInsn(INVOKEVIRTUAL, "models/MyRecord", "x", "()Ljava/lang/String;");
+mv.visitVarInsn(ASTORE, 5);
+mv.visitInsn(DUP);
+Label l4 = new Label();
+mv.visitJumpInsn(IFNONNULL, l4);
+mv.visitInsn(POP);
+mv.visitVarInsn(ALOAD, 5);
+Label l5 = new Label();
+mv.visitJumpInsn(IFNULL, l5);
+Label l6 = new Label();
+mv.visitJumpInsn(GOTO, l6);
+mv.visitLabel(l4);
+mv.visitFrame(Opcodes.F_FULL, 6, new Object[] {"models/MyRecord", "java/lang/Object", "java/lang/Object", Opcodes.INTEGER, "models/MyRecord", "java/lang/String"}, 1, new Object[] {"java/lang/String"});
+mv.visitVarInsn(ALOAD, 5);
+mv.visitMethodInsn(INVOKEVIRTUAL, "java/lang/Object", "equals", "(Ljava/lang/Object;)Z");
+mv.visitJumpInsn(IFEQ, l6);
+mv.visitLabel(l5);
+mv.visitFrame(Opcodes.F_SAME, 0, null, 0, null);
+mv.visitVarInsn(ALOAD, 4);
+mv.visitVarInsn(ALOAD, 0);
+mv.visitMethodInsn(INVOKEVIRTUAL, "models/MyRecord", "canEqual", "(Ljava/lang/Object;)Z");
+mv.visitJumpInsn(IFEQ, l6);
+mv.visitInsn(ICONST_1);
+Label l7 = new Label();
+mv.visitJumpInsn(GOTO, l7);
+mv.visitLabel(l6);
+mv.visitFrame(Opcodes.F_SAME, 0, null, 0, null);
+mv.visitInsn(ICONST_0);
+mv.visitLabel(l7);
+mv.visitFrame(Opcodes.F_SAME1, 0, null, 1, new Object[] {Opcodes.INTEGER});
+mv.visitJumpInsn(IFEQ, l3);
+mv.visitLabel(l0);
+mv.visitFrame(Opcodes.F_FULL, 2, new Object[] {"models/MyRecord", "java/lang/Object"}, 0, new Object[] {});
+mv.visitInsn(ICONST_1);
+Label l8 = new Label();
+mv.visitJumpInsn(GOTO, l8);
 mv.visitLabel(l3);
+mv.visitFrame(Opcodes.F_APPEND,2, new Object[] {"java/lang/Object", Opcodes.INTEGER}, 0, null);
+mv.visitInsn(ICONST_0);
+mv.visitLabel(l8);
+mv.visitFrame(Opcodes.F_FULL, 2, new Object[] {"models/MyRecord", "java/lang/Object"}, 1, new Object[] {Opcodes.INTEGER});
 mv.visitInsn(IRETURN);
-mv.visitMaxs(2, 3);
+mv.visitMaxs(2, 6);
 mv.visitEnd();
 }
 {
